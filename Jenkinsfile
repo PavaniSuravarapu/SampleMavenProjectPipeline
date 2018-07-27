@@ -22,7 +22,7 @@ pipeline {
 			}
 			post {
 				success {
-					junit "my-app/target/surefire-reports/*.xml'
+						echo "success"
 						}
 				}
 			}
