@@ -15,15 +15,5 @@ pipeline {
 				'''
 			}
 		}
-	
-		stage ('Build') {
-			steps {
-					bat 'cd my-app & mvn install'
-			}
-			post {
-				success {
-						echo "success"
-						}
-				}
-			}
-		}
+	}
+}
