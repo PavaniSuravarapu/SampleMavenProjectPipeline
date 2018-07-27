@@ -1,19 +1,15 @@
 pipeline {
-	agent {
-		label "windows"
-		}
-	tools {
-		maven "MAVEN_HOME"
-		jdk "JAVA_HOME"
-		}
-	stages {
-		stage ('Initialize') {
-			steps {
-				bat '''
-					echo "PATH = %Path%"
-					echo "MAVEN_HOME = %MAVEN_HOME%"
-				'''
-			}
-		}
-	}
+  ...
+  stages {
+    stage('HelloWorld') {
+      steps {
+        echo 'Hello World'
+      }
+    }
+    stage('git clone') {
+      steps {
+        git clone "https://github.com/PavaniSuravarapu/SampleMavenProjectPipeline.git"
+      }
+    }
+  }
 }
